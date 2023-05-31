@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>data in spreadsheets</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' media='screen' href='main.css'>
+    <script src='main.js'></script>
+    <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      color: #fff;
+      background-color: #f0f0f0;
+      font-family: helvetica;
+      background: url('http://clevertechie.com/img/bnet-bg.jpg') #0f2439 no-repeat center top;
+    }
+
+    .body-content {
+      max-width: 800px;
+      margin: 20px auto;
+      padding: 20px;
+      background: transparent;
+    }
+
+    .module {
+      margin-bottom: 20px;
+    }
+
+    h1 {
+      font-size: 2em;
+      font-family: "Core Sans N W01 35 Light";
+      font-weight: normal;
+      margin: .67em 0;
+      display: block;
+      text-align: center;
+    }
+
+    form {
+      margin-top: 20px;
+    }
+
+    form .form-group {
+      margin-bottom: 15px;
+    }
+
+    label {
+      display: block;
+      margin-bottom: 5px;
+      font-weight: bold;
+    }
+
+    input,
+    select {
+      width: 100%;
+      height: 34px;
+      padding: 0 10px;
+      font-size: 15px;
+      line-height: 20px;
+      border: 1px solid rgba(255, 255, 255, 0.3);
+      background-color: rgba(0, 0, 0, 0.5);
+      color: rgba(255, 255, 255, 0.7);
+      border-radius: 2px;
+    }
+
+    select {
+      -webkit-appearance: none;
+      -moz-appearance: none;
+      -ms-appearance: none;
+      appearance: none;
+    }
+
+    .btn {
+      display: block;
+      width: 100%;
+      padding: 6px 20px;
+      font-size: 15px;
+      line-height: 20px;
+      height: 34px;
+      background-color: rgba(0, 0, 0, 0.15);
+      color: #00aeff;
+      border: 1px solid rgba(255, 255, 255, 0.15);
+      border-radius: 2px;
+      transition: background-color 0.2s, box-shadow 0.2s, border-color 0.2s, color 0.2s;
+      text-align: center;
+      text-decoration: none;
+    }
+
+    .btn:hover,
+    .btn:focus {
+      background-color: rgba(0, 0, 0, 0.25);
+      color: #ffffff;
+      border-color: rgba(255, 255, 255, 0.3);
+      box-shadow: 0 0 rgba(0, 0, 0, 0);
+    }
+
+    .btn-primary {
+      background-color: #098cc8;
+      color: #ffffff;
+      border: 1px solid transparent;
+      border-radius: 2px;
+      transition: background-color 0.2s
+    </style>
+</head>
+<body>
+   
+<link rel="stylesheet" href="form.css" type="text/css">
+<div class="body-content">
+  <div class="module">
+    <h1>Punch me!!!</h1>
+    <form class="form" id="form1" method="post" action = "https://script.google.com/macros/s/AKfycbwTDNhhlhoC0Sve5C5Gn1CEPn7uFmoQi4YGRLZd9sSpO9B-WqhEeEQcqr_rJHDPT37U/exec" enctype="multipart/form-data" autocomplete="off">
+      <div class="alert alert-error"></div>
+      employeecode:-
+      <input type="text" placeholder="employeecode" name="employeecode" required /><br>
+      username:-<br>
+      <input type="text" placeholder="User Name" name="username" required /><br>
+      Punch type:-<br>
+      <select name="punchtype" >
+          <option value="punch-in" selected>Punch in</option>
+          <option value="Punch-out">Punch out</option>
+      </select>
+	<br>
+	choose date time:- 
+    	<input type="datetime-local" name="datetimepicker" required >
+      <input type="submit" value="submit" name="submit" class="btn btn-block btn-primary" />
+      <a href="https://docs.google.com/spreadsheets/d/1M-2kDlGQIrZNsU7y5VNCGcm-hPMo6xMSvEWBJC7U6R0/edit?usp=sharing">see all details here</a>
+    </form>
+  </div>
+</div>
+<script>
+/*jQuery('#form1').on('submit',function(e)
+   {
+     e.preventDefault();
+     jQuery.ajax({
+       url:'https://script.google.com/macros/s/AKfycbx2gAb_FYP4NKcUq_eUB37MacRBIGfcbCqAe8gFo9jPyQ_ZB837GkKJRXFRHtc7BNW7/exec',
+       type :'post',
+       data:jQuery('#form1').serialize(),
+       success:function(result){
+           console.log(result);
+           alert("date inserted");
+       }
+     })
+   }); */
+  </script>
+</body>
+</html>
